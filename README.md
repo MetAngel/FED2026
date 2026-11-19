@@ -349,6 +349,13 @@ WCAG Checklist 1/2:
  8. MDN Web Docs. (z.d). ::before CSS Pseudo-element. Geraadpleegd op 13 october 2026.
  9. MDN Web Docs. (z.d). background-*. Geraadpleegd op 13 october 2026.
  10. ChatGPT. (z.d). margin-inline. Geraadpleegd op 5 november 2026.
+ 11. ChatGPT. (z.d). Hamburger animatie. Geraadpleegd op 17 november 2026.
+ 12. ChatGPT. (z.d). <hr>. Geraadpleegd op 19 november 2026.
+ 13. ChatGPT. (z.d). document.body.classList.toggle(“menu-open”);. Geraadpleegd op 19 november 2026.
+ 14. Gemini Notebook (z.d). Verschil tussen `@media` en `[data-theme="dark"]`. Geraadpleegd op 19 november 2026.
+ 15. MDN Web Docs. (z.d). Using Media queries. Geraadpleegd op 19 october 2026.
+ 16. Gemini Notebook (z.d). Media queries, responsive plane. Geraadpleegd op 19 november 2026.
+ 17.  MDN Web Docs. (z.d). Orientation. Geraadpleegd op 19 october 2026.
  
 
 </details>
