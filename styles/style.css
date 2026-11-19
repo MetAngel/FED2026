@@ -7,40 +7,73 @@
   
 }
 
-
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
+	--color-black: #000;
+	--color-white: #fff;
+	--color-off-white: #f8f8f7;
+	--color-off-black: #140700;
+	--color-mid-white: #d0d0c8;
+	--color-mid-black: #5e5855;
+	--color-grey-10: #1d1d1d;
+	--color-grey-30: #4c4c4c;
+	--color-grey-60: #7a7a7a;
+	--color-grey-80: #ccc;
+	--color-grey-97: #f7f7f7;
+	--color-brian-orange: #ff7600;
+	--color-html: #f8f8f7;
+	--color-background: var(--color-off-white);
+	--color-mid: var(--color-mid-black);
+	--color-foreground: var(--color-off-black);
+	--color-button-background: var(--color-black);
+	--color-button-foreground: var(--color-white);
+	--color-close-button-background: var(--color-white);
+	--color-close-button-foreground: var(--color-black);
+	--font-primary: 'PortraitText', serif; 
+	--font-secondary: 'Graphik', sans-serif; 
+	--font-weight-body: 400;
+	--color-menu-background: #140700;
+	--color-menu-text: #f8f8f7;
+
+}
+
+/* :root { */
 	/* startje */
 	--color-text:#140700;
 	--color-background:#f8f8f7;
 	--color-text-dark:#f8f8f7; 
 	--color-background-dark:#140700;
 	--color-mid: #5e5855;
-
 }
 
 
+html {
+	background-color: var(--color-html);
+	color: var(--color-foreground);
+}
 
+body,html {
+	position: relative;
+}
 
+button {
+	border: none;
+	outline: none
+}
 
+/* LIGHT/DARK-MODE @media (prefers-color-scheme: drie waarden: light, dark en no-preference */
+
+body.menu-open {
+    background-color: var(--color-menu-background);
+    color: var(--color-menu-text);
+}
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
-
-/* jouw code */
-
-body{
-	background-color: var(--color-background-);
-
-}
 
 /****************/
 /* HERO VIDEO */
@@ -55,19 +88,12 @@ video {
 
 	display: block;
     margin-inline: auto;
-	
-
 }
 	
-
 /****************/
 /* IMAGES */
 /****************/
 
-/* main img{
-    width: 20%;
-	height: 20%;
-} */
 
 /****************/
 /* INPUT SVG */
@@ -77,67 +103,64 @@ input::before {
 	content: "http://www.w3.org/2000/svg";
 }
 
-
 /****************/
 /* FONT */
 /****************/
 
 @font-face {
-	font-family: 'Graphik-Regular-Trial';
-	src:        url('/font/converted_fonts/Graphik-Regular-Trial.woff') format('woff');
-	font-weight: normal;
+	font-family: 'Graphik';
+	src: url('/font/graphik-400.woff2') format('woff2');
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
-  }
+}
 
 @font-face {
-	font-family: 'PortraitText-Regular-Trial';
-	src:        url('/font/converted_fonts/PortraitText-Regular-Trial.woff') format('woff');
-	font-weight: normal;
+	font-family: 'PortraitText';
+	src: url('/font/portrait-text-400.woff2') format('woff2');
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
-  }
+}
 
 /****************/
 /* TYPOGRAFIE */
 /****************/
 
-h1 {
-	font-size: 2em;
-	display: block;
-	text-align: center;
-	color: var(--color-text);
+h1 { 
+	font-weight: normal;
 }
 
 h1, h2, nav a {
-	font-family: 'PortraitText-Regular-Trial', sans-serif;
-	color: var(--color-text);
+	font-weight: normal;
+	font-family: var(--font-primary);
+	color: var(--color-off-black);
 	text-decoration: none;
-
 }
 
 p, h3, button, label{
-	font-family: 'Graphik-Regular-Trial', sans-serif;
-	color: var(--color-text);
+	font-weight: normal;
+	font-family: 'Graphik', sans-serif;
+	color: var(--color-off-black);
 	text-decoration: none;
 }
 
 h3 {
-	color: var(--color-mid);
+	color: var(--color-mid-black);
 }
 
 a:visited {
-	color: var(--color-text);
+	color: var(--color-off-black);
 }
 
 .navLinks a {
-	font-family: 'Graphik-Regular-Trial', sans-serif;
-	color: var(--color-text);
+	font-family: 'Graphik', sans-serif;
+	color: var(--color-off-black);
 }
 
 input {
 	font-size: .875em;
-	font-family: 'Graphik-Regular-Trial', sans-serif;
+	font-family: 'Graphik', sans-serif;
 	font-weight: 400;
 }
 
@@ -146,11 +169,7 @@ ul {
 	padding: 0;
 }
 
-li {
-	text-decoration: none;
-}
-
-a {
+li, a {
 	text-decoration: none;
 }
 
@@ -162,29 +181,11 @@ a {
 
 header {
 	position: relative;
-	/* background-color: pink; */
-	/* padding: 2em 1em; */
-
 }
-
-	/* display: flex; */
-/* ik wil dat collins in het midden zit en de hamburger menu
-helemaal naar rechts */
-	/* justify-content: space-between; */
-	/* align-items: center; */
-	/* background-color: var(--color-background-dark); */
-
-
-/* als je wilt dat je header altijd bovenaanblijft:
-postition: sticky;
-top: 0;
- */
-
 
 header ul {
 	list-style-type: none;
 	padding: 0;
-	/* margin-bottom: .5em; */
 }
 
 .navHead {
@@ -193,8 +194,6 @@ header ul {
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
 	align-items: center;
-
-	/* background-color: pink; */
 }
 
 .navHead > a {
@@ -251,17 +250,13 @@ header .navGrid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	padding: 2em 1em;
-	/* margin-top: 4em; */
-	background-color: pink;
+	background-color: var(--color-menu-background);
 
 	row-gap: 0;
 
 	/***** RESPONSIVE FIXED-BUTTON BURGER *****/
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	inset: 0;
 
 	overflow-y: auto;
 
@@ -271,14 +266,64 @@ header .navGrid {
 }
 
 header .navGrid.toonMenu {
+	padding-top: 7em;
     translate: 0 0;
-
 }
 
-.navHead > a, button {
+.navGrid a,
+.navGrid button,
+.navGrid label {
+    color: var(--color-menu-text);
+}
+
+.navGrid h3 {
+	color: var(--color-grey-80);
+}
+
+.navHead {
 	position: relative;
 	z-index: 100;
 }
+
+.navGrid {
+    z-index: 1;
+}
+
+/* HAMBURGER ANIMATION */
+
+.navHead > button svg {
+    width: 100%;
+    height: 100%;
+}
+
+.navHead > button svg rect {
+	transform-box: fill-box;
+    transform-origin: center;
+    transition: transform .3s ease;
+}
+
+/* Als menu open is */
+
+.navHead > button.toonMenu .lineTop {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.navHead > button.toonMenu .lineBottom {
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+body.menu-open .navHead > button svg rect,
+body.menu-open .navHead > a svg {
+    fill: var(--color-menu-text);
+}
+
+body.menu-open .navGrid > button {
+	color: var(--color-menu-background);
+}
+
+
+
+/* HET LUKT MIJ NIET OM DIE HAMBURGER MENU TE VERANDEREN NAAR EEN KRUIS */
 
 /* HOE ZORG IK ERVOOR DAT MIJN BUTTON IN .NAVGRID ZIT IPV .NAVHEAD ZONDER DAT ER VEEL CODE VERLOREN WORDT. */
 /* .navHead.toonMenu > button img {
@@ -376,20 +421,14 @@ header .navGrid > input {
 	background-position: 1.5em center;
 	background-size: 1.5em;
 
-	/* color: var(--color-text-dark); */
     background-color: var(--color-background-dark);
 
 }
-
-/* input::before {
-	content: url("/images/svg/mail.svg");
-} */
 
 header .navGrid > label {
 	grid-column: 1 / 3;
 	grid-row: 4;
 	text-align: center;
-	/* margin-top: 0; */
 }
 
   
@@ -453,7 +492,8 @@ h1 {
 	grid-row: 2;
 }
 
-.hero p, svg {
+.hero p,
+.hero svg {
 	font-size: .75em;
 	grid-row: 3;
 }
@@ -464,7 +504,7 @@ h1 {
 	height: 1.75em;
 }
 
-.svg2 {
+.hero svg:nth-of-type(2) {
 	transform: scaleX(-1);
 }
 
@@ -477,7 +517,7 @@ h1 {
 }
 
 .sectionPrograms p {
-	color: var(--color-mid);
+	color: var(--color-mid-black);
 }
 
 .sectionPrograms > h2 {
@@ -487,8 +527,8 @@ h1 {
 
 .sectionPrograms a {
 	text-decoration: none;
-	font-family: 'Graphik-Regular-Trial', sans-serif;
-
+	font-family: var(--font-secondary);
+	margin-bottom: 7em;
 }
 
 .sectionPrograms > a:first-of-type {
@@ -497,8 +537,8 @@ h1 {
     align-items: center;
     text-decoration: none;
 
-    color: var(--color-text-dark);
-    background: var(--color-background-dark);
+    color: var(--color-off-white);
+    background: var(--color-off-black);
 	font-size: .8em;
 
     width: 161px;
@@ -513,27 +553,26 @@ h1 {
 	padding: 0;
 }
 
-
-.sectionPrograms li {
-	padding: 3em 0 .2em 0;
-}
-
 .sectionPrograms h3 {
 	font-size: 1.5em;
-	color: var(--color-text);
+	color: var(--color-off-black);
 	
 }
 
 .sectionPrograms > a:last-of-type {
 	display: inline-flex;
-
-	padding-top: 4em;
 	font-size: .875em;
 }
 
 .sectionPrograms svg {
 	width: .9em;
 	height: .9em;
+}
+
+hr {
+    border: none;
+    border-top: 0.5px solid var(--color-grey-60);
+    margin: 2em 0;
 }
 
 /****************/
@@ -545,7 +584,7 @@ h1 {
 }
 
 .sectionCases p {
-	color: var(--color-mid);
+	color: var(--color-mid-black);
 }
 
 .sectionCases h2 {
@@ -555,15 +594,15 @@ h1 {
 
 .sectionCases > a {
 	text-decoration: none;
-	font-family: 'Graphik-Regular-Trial', sans-serif;
+	font-family: var(--font-secondary);
 
 	display: inline-flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
 
-    color: var(--color-text-dark);
-    background: var(--color-background-dark);
+    color: var(--color-off-white);
+    background: var(--color-off-black);
 	font-size: .8em;
 
     width: 96.09px;
@@ -601,41 +640,43 @@ h1 {
 	scroll-snap-align:center;
 }
 
-
 /****************/
-/* SECTION: ARTS & CULTURE */
+/* PAGINA 2 : ARTS & CULTURE */
+/****************/
+/****************/
+/* SECTION PAGE 2: ARTS & CULTURE */
 /****************/
 
 .sectionArts {
-	padding: 6em 2em;
+	padding: 6em 3em;
 }
 
 .sectionArts h2 {
 	color: var(--color-mid);
-	font-family: 'Graphik-Regular-Trial', sans-serif;
+	font-family: var(--font-secondary);
 	font-size: 1em;
 	
 	
 }
 
 .sectionArts p {
-	font-family: 'PortraitText-Regular-Trial', sans-serif;
-	font-size: 2.25em;
+	font-family: var(--font-primary);
+	font-size: 1.85em;
 	margin: .5em 0;
 	
 }
 
 .sectionArts > a {
 	text-decoration: none;
-	font-family: 'Graphik-Regular-Trial', sans-serif;
+	font-family: var(--font-secondary);
 
 	display: inline-flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
 
-    color: var(--color-text-dark);
-    background: var(--color-background-dark);
+    color: var(--color-off-white);
+    background: var(--color-off-black);
 	font-size: .8em;
 
     width: 96.09px;
@@ -647,7 +688,7 @@ h1 {
 
 .sectionArts ul {
 	list-style-type: none;
-	padding: 6em 2em 0 2em;
+	padding: 2em 2em 0 2em;
 	margin-inline: -2.5em;
 	gap: 1em;
 	
@@ -662,16 +703,16 @@ h1 {
 }
 
 .sectionArts li {
-		flex-basis:100%;
-		flex-shrink:0;
-		scroll-snap-align:center;
+	flex-basis:100%;
+	flex-shrink:0;
+	scroll-snap-align:center;
 }
 
 /* UITLED VOOR DEZE LI CODE?? */
 
 .sectionArts img {
-	width: 343px;
-	height: 460px;
+	width: 327px;
+	height: 490px;
 	border-radius: 2em;
 }
 
@@ -681,13 +722,133 @@ h1 {
 	
 
 	font-size: 1em;
-	color: var(--color-text-dark);
+	color: var(--color-off-white);
 
 	border-radius: 2em;
 
 	border: none;
-	background-color: gray;
+	background-color: var(--color-grey-60);
 	opacity: 50%;
+
+}
+
+.sectionArts svg {
+	width: 1em;
+	height: 1em;
+}
+
+/****************/
+/* SECTION PAGE 2: INTRODUCTION */
+/****************/
+
+.sectionIntro {
+	padding: 3em 1.5em;
+}
+
+.articleP {
+	background-color: pink;
+	padding: 2em 1.5em;
+	margin-top: 1.5em;
+
+	border-radius: 2em;
+}
+
+.introP {
+	font-size: 1.5em;
+}
+
+/****************/
+/* SECTION PAGE 2: COLLABORATIONS */
+/****************/
+
+.sectionCollab {
+	padding: 4em 1.5em;
+}
+
+.sectionCollab > h2 {
+	font-size: 1.82em;
+}
+
+.sectionCollab > p {
+	padding: 1em 0;
+	color: var(--color-mid);
+}
+
+.sectionCollab img {
+	width: 155.5px;
+	height: 194.16px;
+
+	border-radius: 1em;
+}
+
+.sectionCollab ul {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	gap: 1em;
+
+	padding-top: 2em;
+}
+
+.sectionCollab li:first-of-type {
+	object-fit: contain;
+}
+
+.sectionCollab button {
+	border: none;
+	background-color: transparent;
+
+	padding: 1.5em 0;
+
+	font-size: 1.1em;
+	text-align: left;
+}
+
+/****************/
+/* SECTION PAGE 2: GATHERINGS */
+/****************/
+
+.sectionGatherings {
+	padding: 4em 2em;
+}
+
+.sectionGatherings > h2 {
+	font-size: 1.82em;
+}
+
+.sectionGatherings p {
+	padding: 1em 0;
+	color: var(--color-mid);
+}
+
+.sectionGatherings img {
+	width: 308.250px;
+	height: 324.289px;
+	margin-bottom: 1em;
+
+	border-radius: 1em;
+}
+
+.sectionGatherings ul {
+	padding: 2em 2em 0 2em;
+	margin-inline: -2.5em;
+
+	display: flex;
+	overflow: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type:x mandatory;
+  	scroll-behavior:smooth;
+
+	scrollbar-width: none;
+}
+
+.sectionGatherings a {
+	font-family: var(--font-secondary);
+}
+
+.sectionGatherings li {
+	flex-basis:100%;
+	flex-shrink:0;
+	scroll-snap-align:center;
 }
 
 /****************/
@@ -699,7 +860,7 @@ footer {
 	grid-template-columns: 1fr 1fr;
 	padding: 4.75em 1em;
 	
-	background-color: pink;
+	background-color: var(--color-menu-background);
 
 	row-gap: 0;
 }
@@ -766,6 +927,178 @@ footer > label {
 	grid-row: 4;
 	text-align: center;
 	margin-top: 4em;
+}
+
+footer a,
+footer a:visited,
+footer button,
+footer label {
+    color: var(--color-menu-text);
+}
+
+footer > button {
+	color: var(--color-menu-background);
+}
+
+/****************/
+/* RESPONSIVE PLANE */
+/****************/
+
+@media (min-width: 48em) {
+
+	/****************/
+	/* RESPONSIVE PLANE: EERSTE PAGINA */
+	/****************/
+	
+	.navHead > a {
+		grid-column: 1;
+		justify-self: start;
+	}
+	
+	h1 {
+		font-size: 3.625em;
+	}
+
+	video {
+        width: 736px;
+        height: 414px;
+    }
+
+	.sectionPrograms > h2,
+	.sectionCases > h2 {
+		margin-right: 6em;
+		text-align: left;
+	}
+
+	.sectionPrograms li > a {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+		margin-bottom: 0;
+    }
+
+    .sectionPrograms h3 {
+        grid-column: 1;
+        font-size: 1.625em;
+    }
+
+    .sectionPrograms li p {
+        grid-column: 2;
+        justify-self: start;
+        font-size: 1em;
+    }
+
+	/****************/
+	/* RESPONSIVE PLANE: MENU */
+	/****************/
+
+	header .navGrid {
+		grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+
+		padding: 8em 7vw 5em;
+        column-gap: 2em;
+	}
+
+	header .navMenu {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 3.625em;
+        text-align: left;
+        align-self: start;
+        margin: 0;
+    }
+
+	header .navGrid > button {
+		grid-column: 1;
+		grid-row: 2;
+
+		justify-self: start;
+        align-self: start;
+		
+		padding: 1em;
+		margin: 2em 0;
+	}
+
+	header .navButtons {
+		grid-column: 1;
+        grid-row: 2;
+
+		display: flex;
+		flex-direction: row;
+	    justify-self: end;
+
+    	align-self: start;
+   		margin: 2em 0;
+	}
+
+	header .navGrid > input {
+		grid-column: 1;
+		grid-row: -1;
+
+		justify-self: start;
+		align-self: end;
+		margin: 0;
+	}
+
+	header .navGrid > label {
+		margin-left: 1em;
+		margin-bottom: 0;
+		text-align: left;
+
+		grid-row: 3;
+	}
+
+
+	header .navCards {
+        grid-column: 2;
+        grid-row: 1;
+
+		margin: 2em 0 1em 3em;
+        gap: 1em
+    }
+
+	header .navLinks {
+		grid-column: 2;
+		grid-row: -1;
+		flex-direction: row;
+		gap: 2em;
+
+		margin: auto;
+	}
+
+
+
+	/****************/
+	/* RESPONSIVE PLANE: TWEEDE PAGINA */
+	/****************/
+
+	/****************/
+	/* RESPONSIVE PLANE: FOOTER */
+	/****************/
+
+}
+
+@media (min-width: 75em) {
+
+}
+
+main, .container {
+	max-width: 1800px;
+	margin-inline: auto;
+}
+
+
+@media (orientation: landscape) {
+	body {
+	  flex-direction: row;
+	}
+}
+  
+  @media (orientation: portrait) {
+	body {
+	  flex-direction: column;
+	}
 }
 
 
