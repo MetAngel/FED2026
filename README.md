@@ -266,6 +266,16 @@ WCAG Checklist 1/2:
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  <img src="readme-images/1w.jpeg" width="375px" alt="wcag checklist eerste bladzijde">
+
+  <img src="readme-images/2w.jpeg" width="375px" alt="wcag checklist tweede bladzijde">
+
+  <img src="readme-images/3w.jpeg" width="375px" alt="wcag checklist derde bladzijde">
+
+  <img src="readme-images/4w.jpeg" width="375px" alt="wcag checklist vierde bladzijde">
+
+  <img src="readme-images/5w.jpeg" width="375px" alt="wcag checklist vijfde bladzijde">
+
 </details>
 
 
