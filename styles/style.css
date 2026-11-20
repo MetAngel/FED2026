@@ -39,23 +39,19 @@
 
 }
 
-/* :root { */
-	/* startje */
-	--color-text:#140700;
-	--color-background:#f8f8f7;
-	--color-text-dark:#f8f8f7; 
-	--color-background-dark:#140700;
-	--color-mid: #5e5855;
-}
-
-
 html {
 	background-color: var(--color-html);
 	color: var(--color-foreground);
 }
 
+body {
+    overflow-x: clip;
+}
+
+
 body,html {
 	position: relative;
+	
 }
 
 button {
@@ -548,6 +544,12 @@ h1 {
 
 }
 
+.sectionPrograms li {
+    border-bottom: .5px solid var(--color-grey-60);
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+}
+
 .sectionPrograms ul {
 	list-style-type: none;
 	padding: 0;
@@ -567,12 +569,6 @@ h1 {
 .sectionPrograms svg {
 	width: .9em;
 	height: .9em;
-}
-
-hr {
-    border: none;
-    border-top: 0.5px solid var(--color-grey-60);
-    margin: 2em 0;
 }
 
 /****************/
@@ -638,6 +634,21 @@ hr {
 
 .sectionCases li {
 	scroll-snap-align:center;
+}
+
+.sectionCases {
+    background-color: var(--color-off-black);
+    color: var(--color-off-white);
+}
+
+.sectionCases h2,
+.sectionCases p {
+    color: var(--color-off-white);
+}
+
+.sectionCases > a {
+    background-color: var(--color-off-white);
+    color: var(--color-off-black);
 }
 
 /****************/
@@ -737,6 +748,11 @@ hr {
 	height: 1em;
 }
 
+body:has(.hero) .sectionArts {
+	background-color: var(--color-brian-orange);
+
+}
+
 /****************/
 /* SECTION PAGE 2: INTRODUCTION */
 /****************/
@@ -746,15 +762,17 @@ hr {
 }
 
 .articleP {
-	background-color: pink;
-	padding: 2em 1.5em;
+    background-color: var(--color-white);
+    border-radius: 3em;
+    padding: 2em 1.5em;
 	margin-top: 1.5em;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.12);
 
-	border-radius: 2em;
 }
 
-.introP {
-	font-size: 1.5em;
+.articleP p {
+	font-family: 'PortraitText', serif;
+	font-size: 1.725em;
 }
 
 /****************/
@@ -858,7 +876,7 @@ hr {
 footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	padding: 4.75em 1em;
+	padding: 8em 1em;
 	
 	background-color: var(--color-menu-background);
 
@@ -940,6 +958,7 @@ footer > button {
 	color: var(--color-menu-background);
 }
 
+
 /****************/
 /* RESPONSIVE PLANE */
 /****************/
@@ -987,6 +1006,31 @@ footer > button {
         justify-self: start;
         font-size: 1em;
     }
+
+	body:not(:has(.hero)) .sectionArts img {
+		width: 736px;
+		height: 490.664px;
+		object-fit: cover;
+	}
+
+	body:not(:has(.hero)) .sectionCollab img {
+		width: 100%;
+		height: 488.664px;
+		object-fit: cover;
+	}
+
+	body:not(:has(.hero)) .sectionGatherings ul {
+		display: flex;
+		gap: 1.5em;
+		overflow-x: auto;
+	}
+	
+	body:not(:has(.hero)) .sectionGatherings img {
+		width: 100%;
+		height: 437.016px;
+		object-fit: cover;
+	}
+	
 
 	/****************/
 	/* RESPONSIVE PLANE: MENU */
@@ -1067,29 +1111,161 @@ footer > button {
 		margin: auto;
 	}
 
+	footer > nav a {
+		font-size: 1.2em;
+	}
+
+	footer {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr auto;
+
+	}
+
+	footer .navButtons {
+		grid-column: 2;
+        grid-row: 2;
+
+		display: flex;
+		flex-direction: row;
+	    justify-self: start;
+
+    	align-self: start;
+   		margin: 2em 0;
+	}
+
+	footer > button {
+		grid-column: 1;
+		grid-row: 2;
+
+		justify-self: end;
+        align-self: start;
+		
+		padding: 1em 2em;
+		margin: 1.5em 2em;
+	}
+
+	footer .navLinks {
+		grid-column: 2;
+		grid-row: 5;
+		flex-direction: row;
+		gap: 2em;
+
+		margin: auto;
+	}
+
+	footer > input {
+		grid-column: 1;
+		grid-row: 5;
+
+		justify-self: start;
+		align-self: end;
+		margin: 0;
+	}
+
+	footer > label {
+		margin-left: 1em;
+		margin-bottom: 1em;
+		text-align: left;
+
+		grid-row: 3;
+	}
 
 
-	/****************/
-	/* RESPONSIVE PLANE: TWEEDE PAGINA */
-	/****************/
-
-	/****************/
-	/* RESPONSIVE PLANE: FOOTER */
-	/****************/
 
 }
 
 @media (min-width: 75em) {
 
+	header .navMenu {
+		font-size: 4.5em;
+		padding: 1em 0;
+    }
+
+	h1 {
+		font-size: 4.5em;
+	}
+
+	.hero {
+		padding: 14em 0;
+	}
+
+	video {
+		width: 1168px;
+		height: 657.000px;
+	}
+
+	.sectionPrograms > h2,
+	.sectionCases > h2 {
+		font-size: 2.25em;
+		margin-right: 15em;
+	}
+
+	footer {
+		padding: 11em 8em;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr auto;
+
+	}
+
+	footer > nav a {
+		font-size: 1.5em;
+	}
+
+	body:not(:has(.hero)) .sectionArts img {
+		width: 100%;
+		height: 642.664px;
+		object-fit: cover;
+	}
+
+	body:not(:has(.hero)) .sectionCollab {
+		margin: 0 2em;
+	}
+
+	body:not(:has(.hero)) .sectionCollab ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2em 1em;
+    }
+
+    body:not(:has(.hero)) .sectionCollab li {
+        width: 100%;
+    }
+
+    body:not(:has(.hero)) .sectionCollab img {
+		width: 100%;
+		height: 458px;
+		object-fit: cover;
+		border-radius: 1.5em;
+    }
+
+}
+
+@media (min-width: 112.5em) {
+	.navHead {
+		margin: 0 11.375em;
+	}
+
+	.hero {
+		padding: 26.5em 0;
+	}
+
+	main {
+		padding: 0 15em;
+	}
+
+	footer {
+		padding: 26em;
+	}
 }
 
 main, .container {
 	max-width: 1800px;
 	margin-inline: auto;
+
 }
 
 
-@media (orientation: landscape) {
+/* @media (orientation: landscape) {
 	body {
 	  flex-direction: row;
 	}
@@ -1099,7 +1275,8 @@ main, .container {
 	body {
 	  flex-direction: column;
 	}
-}
+} */
 
+/* MEDIA ORIENTATION WERKT ALLEEN MET BODY, DISPLAY: FLEX. ALLEEN DAN VERANDERT MIJN HELE WEBSITE DUS IK LAAT HET VOOR NU */
 
 
